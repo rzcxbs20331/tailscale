@@ -1,4 +1,4 @@
-module tailscale.com
+module github.com/rzcxbs20331/tailscale
 
 go 1.24.0
 
