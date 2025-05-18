@@ -2346,7 +2346,7 @@ func (s *Server) ServeDebugTraffic(w http.ResponseWriter, r *http.Request) {
 
 var bufioWriterPool = &sync.Pool{
 	New: func() any {
-		return bufio.NewWriterSize(io.Discard, 2<<10)
+		return bufio.NewWriterSize(io.Discard, 64<<10)
 	},
 }
 
