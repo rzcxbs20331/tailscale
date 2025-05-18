@@ -2344,9 +2344,11 @@ func (s *Server) ServeDebugTraffic(w http.ResponseWriter, r *http.Request) {
 	}
 }
 
+const BufferSize = 64 * 1024
+
 var bufioWriterPool = &sync.Pool{
 	New: func() any {
-		return bufio.NewWriterSize(io.Discard, 64<<10)
+		return bufio.NewWriterSize(io.Discard, BufferSize)
 	},
 }
 
