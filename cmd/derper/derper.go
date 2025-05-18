@@ -171,6 +171,7 @@ func main() {
 	flag.Parse()
 	if *versionFlag {
 		fmt.Println(version.Long())
+		fmt.Printf("BufferSize: %d\n", derp.BufferSize)
 		return
 	}
 
